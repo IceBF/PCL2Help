@@ -1,0 +1,108 @@
+<local:MyHint Margin="0,0,0,15" Text="该帮助页面还需要根据规范重新整理格式，优化排版与文案。如果你感兴趣也可以来帮帮忙！" IsWarn="False" />
+<local:MyCard Title="前言">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="本教程针对部分初次游玩MC或从未接触过服务端，但希望开设个人游戏服务器的玩家。" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="通过本教程，您可以学会如何开设一个简单的基础服务端，以供您与朋友获得更好的体验。" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="在阅读本教程前，希望您知晓以下几点。" />
+        <TextBlock Margin="20,5,20,0" FontSize="11"
+                   Text="1.您熟知简单的电脑操作方法并知晓一定的电脑术语。" />
+        <TextBlock Margin="20,5,20,0" FontSize="11"
+                   Text="2.您用于开设服务器的设备硬件达标，为了您的良好体验，请选择主频较高的CPU以及4G以上内存。" />
+        <TextBlock Margin="20,5,20,0" FontSize="11"
+                   Text="3.确保您的电脑安装了Java环境。您可以在电脑的命令提示符窗口键入“java -version”通过是否有回复您的Java版本来确认是否安装了Java环境。" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="准备服务端">
+     <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="您可以从以下方式获取服务端核心与相关介绍或直接获取您所中意的成品服务端。" />
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="服务端核心介绍及获取" EventType="打开网页" EventData="https://www.mcbbs.net/thread-1031571-1-1.html" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="直接获取成品服务端" EventType="打开网页" EventData="https://www.mcbbs.net/forum-serverpack-1.html" />
+     </StackPanel>
+     <local:MyHint Margin="0,0,0,15" Text="成品服务端是已经成功启动过并配置好的服务端，您在确认可以成功启动后可直接跳转到下一步操作。" IsWarn="False" />   
+        <TextBlock Margin="0,0,0,4" 
+                   Text="以下是对服务端核心使用介绍,本教程选用的是Catserver。" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="1.在获取服务端核心后，需要将服务端放置在一个单独的空文件夹内。" />
+        <Image Height="300" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXHVfK.png" />
+        <TextBlock Margin="10,0,0,4" 
+                   Text="2.您需要新建一个txt文件，写入启动脚本并修改后缀为bat后运行。需要注意的是，脚本信息中您需要将最后的语句设置为服务端核心名称。" />     
+        <Image Height="300" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXKTzV.png" />
+        <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="复制启动脚本信息" EventType="复制文本" EventData="Java -Xms4G -Xmx4G  -jar CatServer.jar" ToolTip="请注意根据需求更改内存分配与启动核心名称！" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="3.运行启动脚本。" /> 
+        <Image Height="300" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXMqpt.png" />
+<local:MyHint Text="需要注意的是，1.17以下的版本需要Java8运行环境，而1.17以上版本需要Java16运行环境 &#xA; 两者在通常情况下只会存在一个，无法正常使用启动脚本的原因可能是您的运行环境不正确。”" />
+        <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="打开Java环境变量配置教程" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1zU4y137ZD?p=7" />        
+        <TextBlock Margin="10,0,0,4" 
+                   Text="4.成功启动后，需要同意eula协议，否则将无法正常使用服务端。打开服务端文件新生成的eula.txt文件，将其中false更改为true后再次启动脚本文件。" />
+        <Image Height="300" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXlxij.png" />
+        <TextBlock Margin="10,0,0,4" 
+                   Text="5.所有文件如下，启动后加载完毕可得到如图界面，即代表初步设置成功。" />
+        <Image Height="500" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fX16Yj.png" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fX1L11.png" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="6.打开已经下载好的服务端文件夹，找到server.properties文件。" /> 
+        <Image Height="600" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXaTA0.png" />
+        <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="server.properties文件信息介绍" EventType="打开网页" EventData="https://wiki.biligame.com/mc/Server.properties" />
+        <TextBlock Margin="0,0,0,4" 
+                   Text="您可以通过更改false和true来决定是否开启或关闭某选项并通过更改数值决定某些内容" /> 
+        <Image Height="700" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fX0q9f.png" />
+        <local:MyHint Margin="0,0,0,15" Text="如果您需要允许离线用户进入您的服务器，需要将online-mode选项更改为false" IsWarn="False" />
+     
+        <local:MyHint Margin="0,0,0,15" Text="您可以向服务端文件中的mods文件夹添加模组，但请确认您希望添加的模组可适用于服务端且必须向服务端添加才可在服务器内正常使用否则可能出现服务端崩溃、报错，或客户端无法进入服务器。&#xA;您也可向服务端文件中的plugins文件夹添加插件，但请在添加前确认您所添加的插件适用于您的服务端核心，否则可能无法正常加载。" IsWarn="False" />
+       </StackPanel>
+</local:MyCard>
+
+
+<local:MyCard Title="开放服务端">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="当成功开启服务端以后，就代表服务器已经成功建立了。 &#xA; 但是这时，服务器只有和您处在同一局域网下的玩家才可进入。 &#xA; 要让其他玩家进入，需要用到部分方法使您的局域网可被访问。 &#xA; 常见的方法有： &#xA; 1,使用Sakura Frp端口映射。 &#xA; 2,使用PCL2启动器自带的联机功能(建立连接后需要从本地地址+端口方式进入游戏)。 &#xA; 3.如果您租用的是vps，可以咨询服务商，通过公网IP或域名直接进入游戏。" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="需要注意，Sakura Frp是免费的，但是需要实名注册，实名注册过程中需要收取1元人名币。 &#xA; Sakura Frp在免费试用过程中使用超过流量后会从10M限速到4M,因此只适用于朋友联机或开设10人左右中小型服务器。 &#xA; 以下是Sakura Frp使用教程。" Foreground="{DynamicResource ColorBrush3}"/>
+        <TextBlock Margin="0,0,0,4"
+                   Text="1.首先，您需要注册一个Sakure Frp账号。" />
+       <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="Sakura Frp官网" EventType="打开网页" EventData="https://www.natfrp.com/?page=register" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="2.账号注册完成后，进入控制面板，在左侧菜单栏找到实名认证选项。" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXxyy6.png" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="3.根据网站引导完成实名认证后需要进入每日签到选项，领取网站每日赠送的免费流量。" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fXzGhd.png" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="4.在左侧菜单栏找到”创建隧道“选项并按提示创建隧道,端口建议25565。" />
+        <Image Height="500" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fjS6aD.png" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="5.下载并安装Sakura Frp客户端。" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="打开Sakura Frp下载地址" EventType="打开网页" EventData="https://www.natfrp.com/tunnel/download" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="6.下载并安装Sakura Frp运行，在Sakura Frp网页端的菜单栏打开用户信息选项，复制访问密钥并粘贴至Sakura Frp客户端设置中”访问密钥“部分并登录。" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fjCuPe.png" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fjC7dK.png" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="7.成功登录Sakura Frp客户端后进入隧道，可见在第4步中创造的隧道，开启隧道，在日志中可找到链接地址。" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fjPfk8.png" />
+        <Image Height="400" HorizontalAlignment="Center" Source="https://z3.ax1x.com/2021/08/20/fjPq00.png" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="8.该地址则为您的服务器IP地址,您的朋友或者玩家可以通过在客户端输入该地址进入您的服务器。" />
+
+
+
+
+
+</StackPanel>
+</local:MyCard>
+<local:MyHint Margin="0,0,0,15" Text="作者:Ice_BingFeng" IsWarn="False" />
